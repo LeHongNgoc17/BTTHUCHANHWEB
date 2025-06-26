@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color: red;
+        }
+        .phieu{
+            background-color: rgb(255, 212, 219);
+            padding: 10px;
+        }
+        .submit{
+            position: relative;
+            left: 70px;
+        }
+    </style>
+</head>
+<body>
+     <button class="phieu">
+        <h2>Thanh toán đơn hàng</h2>
+        <form action="">
+            <p>Tên:</p>
+            <input type="text" placeholder="Nhập tên của bạn">
+            <p>Email:</p>
+            <input type="email" placeholder="example@gmail.com">
+            <p>Số điện thoại:</p>
+            <input type="tel" placeholder="Số điện thoại">
+            <p>Địa chỉ giao hàng:</p>
+            <textarea name="" id="" rows="1" placeholder="Nhập địa chỉ"></textarea>
+
+            <p>Chọn hình thức thanh toán:</p>
+            <select name="" id="">
+                <option value="">Chọn một hình thức</option>
+                <option value="1">Thanh toán khi nhận hàng</option>
+                <option value="2">Thanh toán qua ngân hàng</option>
+                <option value="3">Thanh toán qua ví điện tử</option>
+            </select>
+        </form>
+     </button>
+    <br>
+    <br>
+    <button class="submit" type="submit">Thanh toán</button>
+</body>
+</html>
