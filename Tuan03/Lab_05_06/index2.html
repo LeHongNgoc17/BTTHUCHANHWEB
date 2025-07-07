@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            text-align: center;
+            font-style: italic;
+            color: red;
+            background-color: blanchedalmond;
+        }
+
+        ul{
+            display: grid;
+            grid-template-areas: 
+                "mon1 mon2 mon3"
+                "mon4 mon5";
+            grid-template-columns: 1fr 1fr;
+            font-size: 20px;
+        }
+
+        .mon1, .mon3, .mon5 {
+            background-color: rgb(249, 249, 122);
+        }
+
+        .mon2, .mon4, .mon6{
+            background-color: rgb(161, 212, 213);
+        }
+
+        ul li:hover{
+            background-color: pink;
+        }
+
+        li{
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Danh Sach Cac Mon Hoc Yeu Thich</h1>
+    <ul>
+        <li class="mon1">Tieng Anh</li>
+        <li class="mon2">The Duc</li>
+        <li class="mon3">Toan</li>
+        <li class="mon4">Hoa Hoc</li>
+        <li class="mon5">Ngu Van</li>
+        <li class="mon6">Tin học</li>
+    </ul>
+</body>
+</html>
