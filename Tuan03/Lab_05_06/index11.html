@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(252, 252, 244);
+        }
+        h1{
+            color: rgb(253, 161, 176);
+            text-align: center;
+        }
+        .login{
+            display: grid;
+            justify-content: center;
+        }
+        .background{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: rgb(255, 212, 218);
+            width: 300px;
+            height: 200px;
+            padding: 5px;
+            border-radius: 20px;
+            border-style: dotted;
+            border-color: red;
+            border-width: 3px;
+        }
+        .dangnhap{
+            display: grid;
+            justify-content: center;
+        }
+        input{
+            border-color: yellow;
+            box-shadow: 2px 2px 2px;
+            width: 200px;
+            height: 25px;
+        }
+        .dangnhap button:hover{
+            background-color: pink;
+        }
+        b{
+            font-size: 20px;
+        }
+        input:hover{
+            transform: scale(1.05);
+        }
+        input:focus{
+            background-color: rgb(253, 215, 222);
+        }
+        button{
+            font-size: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Đăng nhập</h1>
+    <div class="login">
+        <div class="background">
+            <b>Username</b>
+            <input placeholder="input your name" type="text">
+            <b>Password</b>
+            <input placeholder="input your password" type="password">
+        </div>
+    </div>
+    <br>
+    <div class="dangnhap">
+        <button type="submit">Đăng nhập</button>
+    </div>
+</body>
+</html>
