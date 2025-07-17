@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(223, 240, 252);
+        }
+        h2{
+            grid-area: h2;
+            color: white;
+            background-color: rgb(28, 115, 159);
+            text-align: center;
+            font-size: 50px;
+        }
+        .container{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-areas: 
+                "h2"
+                "img"
+                "ghichu"
+                "ggmap";
+            grid-template-columns: 1fr;
+        }
+        .img{
+            grid-area: img;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        img{
+            border-radius: 30px;
+        }
+        .ghichu{
+            grid-area: ghichu;
+            text-align: center;
+            padding: 30px;
+            font-size: 20px;
+            color: rgb(11, 60, 94);
+        }
+        .ggmap{
+            grid-area: ggmap;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="h2">Thông tin du lịch Đà Lạt</h2>
+    <div class="img">
+        <img width="500px" height="320px" src="/Tuan01/photo/thanh-pho-da-lat.png" alt="">
+        <img width="500px" height="320px" src="/Tuan01/photo/DÀ-LẠT-2025.png" alt="">
+    </div>
+    <div class="ghichu">
+        <figcaption><i>Đà Lạt là thành phố tỉnh lỵ trực thuộc tỉnh Lâm Đồng, nằm trên cao nguyên Lâm Viên, thuộc vùng Tây Nguyên, Việt Nam. 
+            Từ xa xưa, vùng đất này vốn là địa bàn cư trú của những cư dân người Lạch, người Chil và người Srê thuộc dân tộc Cơ Ho. Cuối thế kỷ 19, 
+            khi tìm kiếm một địa điểm để xây dựng trạm nghỉ dưỡng dành cho người Pháp ở Đông Dương, Toàn quyền Paul Doumer đã quyết định chọn 
+            cao nguyên Lâm Viên theo đề nghị của bác sĩ Alexandre Yersin, người từng thám hiểm tới nơi đây vào năm 1893. Trong nửa đầu thế kỷ 20, 
+            từ một địa điểm hoang vu, người Pháp đã quy hoạch và xây dựng lên một thành phố xinh đẹp với những biệt thự, công sở, khách sạn và trường học, 
+            một trung tâm du lịch và giáo dục của Đông Dương khi đó. Trải qua những khoảng thời gian thăng trầm của hai cuộc chiến tranh cùng giai đoạn khó 
+            khăn những thập niên 1970-1980, Đà Lạt ngày nay là một thành phố khá đông dân, đô thị loại I trực thuộc tỉnh, giữ vai trò trung tâm chính trị, 
+            kinh tế và văn hóa quan trọng của tỉnh Lâm Đồng và vùng Tây Nguyên.</i></figcaption>
+    </div>
+    <div class="ggmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124928.54111687874!2d108.4507227!3d11.90391085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317112fef20988b1%3A0xad5f228b672bf930!2zVHAuIMSQw6AgTOG6oXQsIEzDom0gxJDhu5NuZw!5e0!3m2!1svi!2s!4v1750693387489!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></body>
+    </div>
+</div>
+</html>
