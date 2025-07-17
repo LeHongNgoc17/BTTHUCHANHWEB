@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .success{
+            color: green;
+            font-size: 20px;
+        }
+        .error{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- 2. Check phone
+	- click -> please input-> check số
+	- class error đỏ, success xanh -->
+
+    <input id="number" type="text" placeholder="0XXXXXXXXX">
+    <button id="btncheck">Check</button>
+    <p id="text"></p>
+
+    <script>
+        var num = document.getElementById("number");
+        var btn = document.getElementById("btncheck");
+        var result = document.getElementById("text");
+        var kiemtra = /^0\d{9}$/;
+
+        btn.onclick = function() {
+            var a = kiemtra.test(num.value);
+            if (a) {
+                result.innerText = "OK";
+                result.className = "success";
+            } else {
+                result.innerText = "please input your phone";
+                result.className = "error";
+            }
+        }
+    </script>
+</body>
+</html>
