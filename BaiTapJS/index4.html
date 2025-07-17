@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4. input 2 numbers -> tổng 2 số này-> in console, in ra web -->
+
+    <input id="number1" type="number" placeholder="input number 1">
+    <input id="number2" type="number" placeholder="input number 2">
+    <button id="btnclick">sum</button>
+    <p id="result"></p>
+
+    <script>
+        var number1 = document.getElementById("number1");
+        var number2 = document.getElementById("number2");
+        var btnclick = document.getElementById("btnclick");
+        var result = document.getElementById("result");
+
+        btnclick.onclick = function() {
+            var a = Number(number1.value);
+            var b = Number(number2.value);
+            var c = a + b;
+            console.log(c);
+            result.innerText = "Tổng bằng = " + c;
+        }
+    </script>
+</body>
+</html>
