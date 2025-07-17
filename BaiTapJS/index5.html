@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 5. Nâng cấp bài 4: Khi click button Sum-> thông báo:
+	a. chưa nhập số
+	b. bạn nhập không phải là số -->
+
+    <input id="number1" type="text" placeholder="input number 1">
+    <input id="number2" type="text" placeholder="input number 2">
+    <button onclick="sum()">sum</button>
+    <p id="result"></p>
+
+    <script>
+        function sum() {
+            var num1 = document.getElementById("number1").value.trim();
+            var num2 = document.getElementById("number2").value.trim();
+            var kqua = document.getElementById("result");
+            if (num1 === "" || num2 === "") {
+                kqua.innerText = "chưa nhập số";
+                return;
+            } else if (isNaN(num1) || isNaN(num2)) {
+                kqua.innerText = "bạn nhập chưa phải là số";
+                return;
+            } else {
+                var a = Number(num1);
+                var b = Number(num2);
+                var c = a + b;
+                console.log(c);
+                document.getElementById("result").innerText = "Tổng = " + c;
+            }
+        }
+    </script>
+</body>
+</html>
