@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 3. Nâng cấp bài 2-> khi click button
+	-> chưa nhập
+	-> bạn mới vừa nhập số
+	-> bạn mới vừa nhập text -->
+
+    <input id="name" type="text" placeholder="input your name">
+    <button id="btnClick">Click</button>
+    <p id="text"></p>
+
+    <script>
+        var input_name = document.getElementById("name");
+        var btnClick = document.getElementById("btnClick");
+        var text = document.getElementById("text");
+
+        btnClick.onclick = function() {
+            var a = input_name.value;
+            if (a === "") {
+                text.innerText = "chưa nhập"
+            } else if (isNaN(a)) {
+                text.innerText = "bạn mới vừa nhập chữ"
+            } else {
+                text.innerText = "bạn mới vừa nhập số"
+            } 
+        }
+
+    </script>
+</body>
+</html>
