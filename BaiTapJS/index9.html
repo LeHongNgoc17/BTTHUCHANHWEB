@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            color: green;
+            font-size: 20px;
+        }
+        .error{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- 4. Check ngày tháng hợp lệ 
+	- DD-MM-YYYY
+	- Logic: new Date js -->
+
+    <input id="inputdate" type="text" placeholder="DD-MM-YYYY">
+    <button id="check">Check</button>
+    <p id="kiemtra"></p>
+
+    <script>
+        var date = document.getElementById("inputdate");
+        var btncheck = document.getElementById("check");
+        var result = document.getElementById("kiemtra");
+        var checkdate = /^\d{2}-\d{2}-\d{4}$/;
+
+        btncheck.onclick = function() {
+            var a = checkdate.test(date.value);
+            if (a) {
+                result.innerText = "OK";
+                result.className = "success";
+            } else {
+                result.innerText = "please input again";
+                result.className = "error";
+            }
+        }
+    </script>
+</body>
+</html>
