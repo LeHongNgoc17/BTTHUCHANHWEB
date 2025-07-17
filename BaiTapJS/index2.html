@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 2. JS-> Tên-> click button-> Web
+Nguyen Van A-> Web-> Hello A -->
+
+    <input id="name" type="text" placeholder="input your name">
+    <button id="btnClick">Click</button>
+    <p id="text"></p>
+
+    <script>
+        var input_name = document.getElementById("name");
+        var btnClick = document.getElementById("btnClick");
+        var text = document.getElementById("text");
+
+        btnClick.onclick = function() {
+            text.innerText = "Hello " + input_name.value
+        }
+    </script>
+</body>
+</html>
