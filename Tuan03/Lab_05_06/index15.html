@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lavenderblush;
+        }
+        h2{
+            color: red;
+            text-align: center;
+            font-size: 30px;
+        }
+        .phieu{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .btn{
+            display: grid;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        p{
+            font-weight: bold;
+        }
+        @media only screen and (max-width: 768px) {
+            .phieu{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!-- 📌 CSS nâng cao: Grid 2 cột: trái là thông tin người nhận, phải là 
+thông tin thanh toán. Responsive gộp thành 1 cột khi nhỏ. -->
+
+    <h2>Thanh toán đơn hàng</h2>
+     <div class="phieu">
+        <div class="thongtincanhan">
+            <p>Tên:</p>
+            <input type="text" placeholder="Nhập tên của bạn">
+            <p>Email:</p>
+            <input type="email" placeholder="example@gmail.com">
+            <p>Số điện thoại:</p>
+            <input type="tel" placeholder="Số điện thoại">
+        </div>
+        <div class="thongtingiaohang">
+            <p>Địa chỉ giao hàng:</p>
+            <textarea name="" id="" rows="1" placeholder="Nhập địa chỉ"></textarea>
+
+            <p>Chọn hình thức thanh toán:</p>
+            <select name="" id="">
+                <option value="">Chọn một hình thức</option>
+                <option value="1">Thanh toán khi nhận hàng</option>
+                <option value="2">Thanh toán qua ngân hàng</option>
+                <option value="3">Thanh toán qua ví điện tử</option>
+            </select>
+        </div>
+     </div>
+    <div class="btn">
+        <button class="submit" type="submit">Thanh toán</button>
+    </div>
+    
+</body>
+</html>
