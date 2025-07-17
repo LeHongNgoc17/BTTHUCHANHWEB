@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(255, 229, 233);
+        }
+        h2{
+            text-align: center;
+            color: rgb(229, 96, 118);
+            background-color: pink;
+            font-size: 30px;
+        }
+        .container{
+            display: grid;
+            justify-content: center;
+            grid-template-areas: 
+                "dt1 dt2 dt3";
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .dt1{
+            grid-area: dt1;
+            box-shadow: 3px 3px 10px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            margin: 30px;
+        }
+        .dt2{
+            grid-area: dt2;
+            box-shadow: 3px 3px 10px;
+            background-color: rgb(207, 238, 253);
+            border-radius: 20px;
+            margin: 30px;
+        }
+        .dt3{
+            grid-area: dt3;
+            box-shadow: 3px 3px 10px;
+            background-color: cornsilk;
+            border-radius: 20px;
+            margin: 30px;
+        }
+        .bt1{
+            grid-area: bt1;
+        }
+        .bt2{
+            grid-area: bt2;
+        }
+        .bt3{
+            grid-area: bt3;
+        }
+        img{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .dt1:hover{
+            transform: scale(1.05);
+        }
+        .dt2:hover{
+            transform: scale(1.05);
+        }
+        .dt3:hover{
+            transform: scale(1.05);
+        }
+        h3, p{
+            text-align: center;
+        }
+        .bt{
+            border-radius: 7px;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .bt button:hover{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+<!-- 📌 CSS nâng cao: Danh sách sản phẩm bố trí bằng CSS Grid 3 cột, 
+responsive. Mỗi sản phẩm là card có ảnh + giá + nút mua. -->
+
+    <h2>Cửa hàng điện thoại</h2>
+    <div class="container">
+        <div class="dt1">
+            <img width="300px" src="/Tuan01/photo/iphone13.png" alt="">
+            <h3>iPhone 13</h3>
+            <p>11.790.000đ</p>
+            <div class="bt"><button class="bt1">Mua ngay</button></div>
+        </div>
+
+        <div class="dt2">
+            <img width="300px" src="/Tuan01/photo/iphone14.png" alt="">
+            <h3>iPhone 14</h3>
+            <p>12.690.000đ</p>
+            <div class="bt"><button class="bt1">Mua ngay</button></div>
+        </div>
+
+        <div class="dt3">
+            <img width="300px" src="/Tuan01/photo/iphone15.png" alt="">
+            <h3>iPhone 15</h3>
+            <p>15.690.000đ</p>
+            <div class="bt"><button class="bt1">Mua ngay</button></div>
+        </div>
+    </div>
+</body>
+</html>
