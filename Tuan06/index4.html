@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .error{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Kiểm tra mật khẩu mạnh  -->
+
+    <h2>Password</h2>
+    <input id="password" type="text" placeholder="your password...">
+    <button id="btncheck">Check</button>
+    <p id="result"></p>
+    <p>Password cần ít nhất 8 ký tự gồm: 1 chữ hoa, 1 chữ thường, 1 số, 1 ký tự đặc biệt. </p>
+
+    <script>
+        var password = document.getElementById("password");
+        var btncheck = document.getElementById("btncheck");
+        var result = document.getElementById("result");
+        var kiemtra = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        btncheck.onclick = function() {
+            var check = kiemtra.test(password.value);
+            if (check) {
+                result.innerText = "OK";
+                result.className = "success";
+            } else {
+                result.innerText = "please input again";
+                result.className = "error";
+            }
+        }
+    </script>
+</body>
+</html>
