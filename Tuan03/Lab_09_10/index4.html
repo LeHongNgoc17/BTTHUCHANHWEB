@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: white;
+            background-color: lightblue;
+            text-align: center;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 
+                "ttcn kynang"
+                "lienlac hocvan";
+            grid-template-columns: 1fr 1fr;
+        }
+        .ttcn{
+            grid-area: ttcn;
+            background-color:lightblue;
+            text-align: center;
+        }
+        .kynang{
+            grid-area: kynang;
+            background-color: rgb(203, 203, 203);
+        }
+        .lienlac{
+            grid-area: lienlac;
+            background-color: rgb(203, 203, 203);
+        }
+        .hocvan{
+            grid-area: hocvan;
+            background-color: lightblue;
+        }
+        img{
+            border-radius: 30px;
+        }
+        div{
+            color: white;
+        }
+        h2{
+            text-align: center;
+            color: white;
+        }
+        p, li, b{
+            font-size: 20px;
+            padding: 5px;
+        }
+        @media only screen and (max-width: 768px) {
+            .container{
+                display: grid;
+                grid-template-areas: 
+                    "ttcn"
+                    "lienlac"
+                    "kynang"
+                    "hocvan";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CV Lê Hồng Ngọc</h1>
+    <div class="container">
+        <div class="ttcn">
+            <h2>Lê Hồng Ngọc</h2>
+            <img width="300px" src="/Tuan02/photo/anh dai dien.png" alt="">
+        </div>
+        <div class="lienlac">
+            <h2>Thông tin liên hệ</h2>
+            <p>Email: ngocle376940@gmail.com</p>
+            <p>Số điện thoại: 0906 376 940</p>
+            <p>Địa chỉ: Củ Chi, Tp. Hồ Chí Minh</p>
+        </div>
+
+        <div class="kynang">
+            <h2>Kỹ năng</h2>
+            <ul>
+                <li>Thiết kế giao diện web đơn giản</li>
+                <li>Kỹ năng sử dụng bàn phím</li>
+                <li>Sử dụng Word, PowerPoint, Exel</li>
+                <li>Kỹ năng làm việc nhóm</li>
+            </ul>
+        </div>
+
+        <div class="hocvan">
+            <h2>Học vấn</h2>
+            <p>Đang học tại<b>Trường Đại học Công Nghiệp Thành Phố Hồ Chí Minh</b> - Chuyên ngành Thương Mại Điện Tử</p>
+        </div>
+    </div>
+</body>
+</html>
