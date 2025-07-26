@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: pink;
+            text-align: center;
+            border-style: dotted;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lavender;
+            font-size: 40px;
+        }
+        .result{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 5. Check ngày tháng trước hoặc sau ngày hiện tại. -->
+
+    <h1>Check ngày tháng</h1>
+    <input id="inputdate" type="date">
+    <button id="btncheck">Check</button>
+    <p id="result"></p>
+
+    <script>
+        var inputdate = document.getElementById("inputdate");
+        var btncheck = document.getElementById("btncheck");
+        var result = document.getElementById("result");
+
+        inputdate.onchange = function() {
+            var mydate = new Date(inputdate.value);
+            var today = new Date();
+            console.log(today);
+            if (mydate < today) {
+                result.innerText = "trước ngày hiện tại";
+                result.className = "result";
+            } else {
+                result.innerText = "sau ngày hiện tại";
+                result.className = "result";
+            }
+        }
+    </script>
+</body>
+</html>

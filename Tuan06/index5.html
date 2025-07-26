@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .error{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Kiểm tra email -->
+
+    <h2>Email</h2>
+    <input id="email" type="email" placeholder="example@gmail.com">
+    <button id="btncheck">Check</button>
+    <p id="result"></p>
+
+    <script>
+        var email = document.getElementById("email");
+        var btncheck = document.getElementById("btncheck");
+        var result = document.getElementById("result");
+        var kiemtra = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+
+        btncheck.onclick = function() {
+            var check = kiemtra.test(email.value);
+            if (check) {
+                result.innerText = "OK";
+                result.className = "success";
+            } else {
+                result.innerText = "please input again";
+                result.className = "error";
+            }
+        }
+    </script>
+</body>
+</html>
