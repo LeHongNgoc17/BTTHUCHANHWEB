@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: chocolate;
+            text-align: center;
+            font-size: 40px;
+        }
+        .container{
+            display: grid;
+            justify-content: center;
+            grid-template-areas: 
+                "left right";
+            grid-template-columns: 1fr 1fr;
+            height: 300px;
+        }
+        .left{
+            grid-area: left;
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+        }
+        .right{
+            grid-area: right;
+            text-align: center;
+            background-color: lavenderblush;
+        }
+        p{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        textarea{
+            width: 90%;
+        }
+        @media only screen and (max-width: 768px) {
+            .container{
+                display: grid;
+                grid-template-areas: 
+                    "left"
+                    "right";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Đặt bàn quán ăn</h1>
+    <div class="container">
+        <div class="left">
+            <p>Nhập tên:</p>
+            <input placeholder="Nhập tên của bạn" type="text">
+            <p>Số người:</p>
+            <input placeholder="VD: 3" type="number">
+            <p>Ngày và giờ:</p>
+            <input type="datetime-local">
+        </div>
+        <div class="right">
+            <p>Yêu cầu đặc biệt:</p>
+            <textarea placeholder="VD: cần nơi yên tĩnh" name="" id=""></textarea>
+        </div>
+    </div>
+
+</body>
+</html>
