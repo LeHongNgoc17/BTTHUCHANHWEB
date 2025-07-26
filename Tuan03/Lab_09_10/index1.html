@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(255, 251, 235);
+        }
+        h1{
+            color: rgb(255, 150, 168);
+            background-color: rgb(255, 230, 234);
+            text-align: center;
+            font-size: 50px;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+            border-radius: 30px;
+            border-style: dotted;
+            border-color: red;
+            border-width: 3px;
+        }
+        .du_an{
+            display: grid;
+            justify-content: center;
+            grid-template-areas: 
+                "TenDA1 TenDA2"
+                "ndDA1 ndDA2";
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(255, 231, 235);
+            gap: 5px;
+            text-align: center;
+        }
+        .TenDA1 > div.du_an{
+            grid-area: Du_an_1;
+        }
+        .TenDA2 > div.du_an{
+            grid-area: Du_an_2;
+        }
+        .ndDA1 > div.du_an{
+            grid-area: ndDA1;
+        }
+        .ndDA2 > div.du_an{
+            grid-area: ndDA2;
+        }
+        .ndDA1:hover{
+            background-color: lightpink;
+        }
+        .ndDA2:hover{
+            background-color: lightpink;
+        }
+        #porfolio{
+            display: grid;
+            grid-template-areas: 
+                "ttcn DA"
+                "ttcn lienhe";
+            grid-template-columns: 1fr 2fr;
+        }
+        .ttcn{
+            grid-area: ttcn;
+            text-align: center;
+        }
+        .DA{
+            grid-area: DA;
+            text-align: center;
+        }
+        .lienhe{
+            grid-area: lienhe;
+        }
+        img:hover{
+            transform: scale(1.05);
+        }
+        @media only screen and (max-width: 768px) {
+            #porfolio{
+                display: grid;
+                grid-template-areas: 
+                    "ttcn"
+                    "DA"
+                    "lienhe";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Porfolio Cá Nhân</h1>
+    <div class="porfolio" id="porfolio">
+        <div class="ttcn">
+            <img src="/Tuan02/photo/anh dai dien.png" alt="">
+            <h2 style="color: rgb(239, 151, 165);">Lê Hồng Ngọc</h2>
+            <p>Sinh viên trường <i>Đại học Công Nghiệp Thành phố Hồ Chí Minh</i></p>
+            <p>Chuyên ngành <i>Thương Mại Điện Tử</i></p>
+        </div>
+
+        <div class="DA">
+            <h2 style="color: rgb(239, 151, 165);">Dự án</h2>
+            <div class="du_an">
+                <div class="TenDA1"><b>Dự Án 1</b></div>
+                <div class="TenDA2"><b>Dự Án 2</b></div>
+                <div class="ndDA1">Website Healing Gen Z - Gợi ý địa điểm chữa lành & workshop cho giới trẻ.</div>
+                <div class="ndDA2">App Quản lý chi tiêu - Ứng dụng theo dõi thu chi đơn giản cho sinh viên.</div>
+            </div>
+        </div>
+
+        <div class="lienhe">
+            <h2 style="color: rgb(239, 151, 165);">Liên hệ</h2>
+            <i><a href="https://github.com/LeHongNgoc17">GitHub</a></i>
+            <br>
+            <i><a href="https://www.linkedin.com/in/h%E1%BB%93ng-ng%E1%BB%8Dc-l%C3%AA-h%E1%BB%93ng-ng%E1%BB%8Dc-ba7819370/">Linkedin</a></i>
+        </div>
+    </div>
+</body>
+</html>
