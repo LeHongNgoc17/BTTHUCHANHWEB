@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 20px;
+        }
+        span{
+            margin: 20px;
+            font-size: 20px;
+        }
+        .bottom{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-left: 50px;
+        }
+        .organic{
+            font-size: 120px;
+            font-family: serif;
+            font-style: italic;
+            font-weight: bold;
+            color: green;
+        }
+        .aloe{
+            font-size: 70px;
+            font-family: serif;
+            font-style: italic;
+            position: relative;
+            bottom: 80px;
+            font-weight: bold;
+        }
+        .text{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            bottom: 120px;
+        }
+        .btn{
+            font-size: 30px;
+            border-style: solid;
+            border-radius: 30px;
+            padding: 20px;
+            border-color: green;
+            background-color: green;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Times New Roman', Times, serif;
+            position: relative;
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="top_left">
+                <span>LOGO</span>
+            </div>
+            <div class="top_right">
+                <span>Home</span>
+                <span>Services</span>
+                <span>Pricing</span>
+                <span>Discount</span>
+                <span>News</span>
+                <span>Contact</span>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="bottom_left">
+                <p class="organic">Organic</p>
+                <p class="aloe">Aloe Vera Gel</p>
+                <p class="text"> IT IS A LONG ESTABUSHED FACT THAT A READER WILL BE DISTRACTED BY THE READABLE CONTENT OF A MOREM</p>
+                <button class="btn">BUY NOW <b>></b></button>
+            </div>
+            <div class="bottom_right">
+                <img height="600px" src="../Lab_09_10/photo/nha_dam.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
