@@ -68,19 +68,25 @@ số và dấu gạch dưới_. -->
     <span id="kqusername"></span>
 
 <!-- 8. URL hợp lệ Input kiểm tra URL hợp lệ. 
-regex = [-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*) -->
+    regex = [-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*) -->
     <h2>Check url</h2>
     <input id="inputurl" type="text" placeholder="your url">
     <button id="btnurl">Check url</button>
     <span id="kqurl"></span>
 
 <!-- 9. Kiểm tra mật khẩu mạnh (ít nhất 8 ký tự, có chữ hoa, thường và số)
-regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; -->
+    regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; -->
     <h2>Check strong_pass</h2>
     <input id="inputstrong_pass" type="text" placeholder="your strong_pass">
     <button id="btnstrong_pass">Check strong_pass</button>
     <span id="kqstrong_pass"></span>
 
+<!-- 10. Kiểm tra email hợp lệ 
+    regex = /^[\w.-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/; -->
+    <h2>Check email</h2>
+    <input id="inputemail" type="text" placeholder="example@gmail.com">
+    <button id="btnemail">Check email</button>
+    <span id="kqemail"></span>
 
     <script>
         // Cau 1
@@ -232,6 +238,23 @@ regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; -->
             } else {
                 kqstrong_pass.innerText = "please input again";
                 kqstrong_pass.className = "error";
+            }
+        }
+
+        // Cau 10
+        var inputemail = document.getElementById("inputemail");
+        var btnemail = document.getElementById("btnemail");
+        var kqemail = document.getElementById("kqemail");
+        var ktemail = /^[\w.-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
+
+        btnemail.onclick = function() {
+            var checkemail = ktemail.test(inputemail.value);
+            if (checkemail) {
+                kqemail.innerText = "OK";
+                kqemail.className = "success";
+            } else {
+                kqsemail.innerText = "please input again";
+                kqemail.className = "error";
             }
         }
     </script>
