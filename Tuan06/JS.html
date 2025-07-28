@@ -27,6 +27,15 @@ Tạo một input để kiểm tra số điện thoại Việt Nam hợp lệ, b
     <button id="btnphone">Check phone</button>
     <span id="kqphone"></span>
 
+<!-- 2. Mật khẩu an toàn 
+check pass: ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$ -->
+    <h2>Check password</h2>
+    <input id="inputpass" type="text" placeholder="your password">
+    <button id="btnpass">Check pass</button>
+    <span id="kqpass"></span>
+
+
+
     <script>
         // Cau 1
         var inputphone = document.getElementById("inputphone");
@@ -42,6 +51,23 @@ Tạo một input để kiểm tra số điện thoại Việt Nam hợp lệ, b
             } else {
                 kqphone.innerText = "please input again";
                 kqphone.className = "error";
+            }
+        }
+
+        // Cau 2
+        var inputpass = document.getElementById("inputpass");
+        var btnpass = document.getElementById("btnpass");
+        var kqpass = document.getElementById("kqpass");
+        var ktpass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+
+        btnpass.onclick = function() {
+            var checkpass = ktpass.test(inputpass.value);
+            if (checkpass) {
+                kqpass.innerText = "OK";
+                kqpass.className = "success";
+            } else {
+                kqpass.innerText = "please input again";
+                kqpass.className = "error";
             }
         }
     </script>
