@@ -40,6 +40,12 @@ check pass: ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$ -->
     <button id="btndate">Check date</button>
     <span id="kqdate"></span>
 
+<!-- 4. Thẻ tín dụng. Kiểm tra số thẻ tín dụng với Regex (giả lập), 16 chữ số, 
+có thể chia thành 4 nhóm 4 số cách nhau bằng dấu cách hoặc không có khoảng trắng.  -->
+    <h2>Check thẻ tín dụng</h2>
+    <input id="inputttd" type="text" placeholder="xxxx xxxx xxxx xxxx">
+    <button id="btnttd">Check ttd</button>
+    <span id="kqttd"></span>
 
 
     <script>
@@ -91,6 +97,23 @@ check pass: ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$ -->
             } else {
                 kqdate.innerText = "please input again";
                 kqdate.className = "error";
+            }
+        }
+
+        // Cau 4
+        var inputttd = document.getElementById("inputttd");
+        var btnttd = document.getElementById("btnttd");
+        var kqttd = document.getElementById("kqttd");
+        var ktttd = /^(\d{4}\s){3}\d{4}$|^\d{16}$/;
+
+        btnttd.onclick = function() {
+            var checkttd = ktttd.test(inputttd.value);
+            if (checkttd) {
+                kqttd.innerText = "OK";
+                kqttd.className = "success";
+            } else {
+                kqttd.innerText = "please input again";
+                kqttd.className = "error";
             }
         }
     </script>
