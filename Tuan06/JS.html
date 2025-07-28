@@ -59,6 +59,14 @@ có thể chia thành 4 nhóm 4 số cách nhau bằng dấu cách hoặc không
     <button id="btnmbn">Check mbn</button>
     <span id="kqmbn"></span>
 
+<!-- 7. Username
+Tạo form nhập username, phải từ 5-15 ký tự, chỉ được dùng chữ cái, 
+số và dấu gạch dưới_. -->
+    <h2>Check username</h2>
+    <input id="inputusername" type="text" placeholder="your username">
+    <button id="btnusername">Check username</button>
+    <span id="kqusername"></span>
+
 
     <script>
         // Cau 1
@@ -160,6 +168,23 @@ có thể chia thành 4 nhóm 4 số cách nhau bằng dấu cách hoặc không
             } else {
                 kqmbn.innerText = "please input again";
                 kqmbn.className = "error";
+            }
+        }
+
+        // Cau 7
+        var inputusername = document.getElementById("inputusername");
+        var btnusername = document.getElementById("btnusername");
+        var kqusername = document.getElementById("kqusername");
+        var ktusername = /^[a-z0-9_]{5,15}$/;
+
+        btnusername.onclick = function() {
+            var checkusername = ktusername.test(inputusername.value);
+            if (checkusername) {
+                kqusername.innerText = "OK";
+                kqusername.className = "success";
+            } else {
+                kqusername.innerText = "please input again";
+                kqusername.className = "error";
             }
         }
     </script>
