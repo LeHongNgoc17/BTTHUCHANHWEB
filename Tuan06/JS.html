@@ -67,6 +67,12 @@ số và dấu gạch dưới_. -->
     <button id="btnusername">Check username</button>
     <span id="kqusername"></span>
 
+<!-- 8. URL hợp lệ Input kiểm tra URL hợp lệ. 
+regex = [-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*) -->
+    <h2>Check url</h2>
+    <input id="inputurl" type="text" placeholder="your url">
+    <button id="btnurl">Check url</button>
+    <span id="kqurl"></span>
 
     <script>
         // Cau 1
@@ -185,6 +191,22 @@ số và dấu gạch dưới_. -->
             } else {
                 kqusername.innerText = "please input again";
                 kqusername.className = "error";
+            }
+        }
+        // Cau 8
+        var inputurl = document.getElementById("inputurl");
+        var btnurl = document.getElementById("btnurl");
+        var kqurl = document.getElementById("kqurl");
+        var kturl = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+
+        btnurl.onclick = function() {
+            var checkurl = kturl.test(inputurl.value);
+            if (checkurl) {
+                kqurl.innerText = "OK";
+                kqurl.className = "success";
+            } else {
+                kqurl.innerText = "please input again";
+                kqurl.className = "error";
             }
         }
     </script>
