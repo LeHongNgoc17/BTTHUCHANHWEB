@@ -53,6 +53,11 @@ có thể chia thành 4 nhóm 4 số cách nhau bằng dấu cách hoặc không
     <button id="btnname">Check name</button>
     <span id="kqname"></span>
 
+<!-- 6. Kiểm tra mã bệnh nhân SG-20230701-00115 (SG-XXXXXXXX-XXXXX) -->
+    <h2>Check mã bệnh nhân</h2>
+    <input id="inputmbn" type="text" placeholder="SG-XXXXXXXX-XXXXX">
+    <button id="btnmbn">Check mbn</button>
+    <span id="kqmbn"></span>
 
 
     <script>
@@ -138,6 +143,23 @@ có thể chia thành 4 nhóm 4 số cách nhau bằng dấu cách hoặc không
             } else {
                 kqname.innerText = "please input again";
                 kqname.className = "error";
+            }
+        }
+
+        // Cau 6
+        var inputmbn = document.getElementById("inputmbn");
+        var btnmbn = document.getElementById("btnmbn");
+        var kqmbn = document.getElementById("kqmbn");
+        var ktmbn = /^SG-\d{8}-\d{5}$/;
+
+        btnmbn.onclick = function() {
+            var checkmbn = ktmbn.test(inputmbn.value);
+            if (checkmbn) {
+                kqmbn.innerText = "OK";
+                kqmbn.className = "success";
+            } else {
+                kqmbn.innerText = "please input again";
+                kqmbn.className = "error";
             }
         }
     </script>
