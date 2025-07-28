@@ -47,6 +47,13 @@ có thể chia thành 4 nhóm 4 số cách nhau bằng dấu cách hoặc không
     <button id="btnttd">Check ttd</button>
     <span id="kqttd"></span>
 
+<!-- 5. Kiểm tra nhập vào họ và tên (ít nhất 2 từ) -->
+    <h2>Check name</h2>
+    <input id="inputname" type="text" placeholder="VD: nguyen van a">
+    <button id="btnname">Check name</button>
+    <span id="kqname"></span>
+
+
 
     <script>
         // Cau 1
@@ -114,6 +121,23 @@ có thể chia thành 4 nhóm 4 số cách nhau bằng dấu cách hoặc không
             } else {
                 kqttd.innerText = "please input again";
                 kqttd.className = "error";
+            }
+        }
+
+        // Cau 5
+        var inputname = document.getElementById("inputname");
+        var btnname = document.getElementById("btnname");
+        var kqname = document.getElementById("kqname");
+        var ktname = /\w+\s\w+/;
+
+        btnname.onclick = function() {
+            var checkname = ktname.test(inputname.value);
+            if (checkname) {
+                kqname.innerText = "OK";
+                kqname.className = "success";
+            } else {
+                kqname.innerText = "please input again";
+                kqname.className = "error";
             }
         }
     </script>
