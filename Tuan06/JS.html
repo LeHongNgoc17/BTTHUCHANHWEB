@@ -74,6 +74,14 @@ regex = [-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&
     <button id="btnurl">Check url</button>
     <span id="kqurl"></span>
 
+<!-- 9. Kiểm tra mật khẩu mạnh (ít nhất 8 ký tự, có chữ hoa, thường và số)
+regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; -->
+    <h2>Check strong_pass</h2>
+    <input id="inputstrong_pass" type="text" placeholder="your strong_pass">
+    <button id="btnstrong_pass">Check strong_pass</button>
+    <span id="kqstrong_pass"></span>
+
+
     <script>
         // Cau 1
         var inputphone = document.getElementById("inputphone");
@@ -207,6 +215,23 @@ regex = [-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&
             } else {
                 kqurl.innerText = "please input again";
                 kqurl.className = "error";
+            }
+        }
+
+        // Cau 9
+        var inputstrong_pass = document.getElementById("inputstrong_pass");
+        var btnstrong_pass = document.getElementById("btnstrong_pass");
+        var kqstrong_pass = document.getElementById("kqstrong_pass");
+        var ktstrong_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+        btnstrong_pass.onclick = function() {
+            var checkstrong_pass = ktstrong_pass.test(inputstrong_pass.value);
+            if (checkstrong_pass) {
+                kqstrong_pass.innerText = "OK";
+                kqstrong_pass.className = "success";
+            } else {
+                kqstrong_pass.innerText = "please input again";
+                kqstrong_pass.className = "error";
             }
         }
     </script>
