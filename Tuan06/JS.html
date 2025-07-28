@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            color: green;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .error{
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1. Số điện thoại Việt Nam
+Tạo một input để kiểm tra số điện thoại Việt Nam hợp lệ, bắt đầu bằng
+0 và có 10 chữ số.  -->
+    <h2>Check phone</h2>
+    <input id="inputphone" type="text" placeholder="0XXX XXX XXX">
+    <button id="btnphone">Check phone</button>
+    <span id="kqphone"></span>
+
+    <script>
+        // Cau 1
+        var inputphone = document.getElementById("inputphone");
+        var btnphone = document.getElementById("btnphone");
+        var kqphone = document.getElementById("kqphone");
+        var ktphone = /^0\d{9}$/;
+
+        btnphone.onclick = function() {
+            var checkphone = ktphone.test(inputphone.value);
+            if (checkphone) {
+                kqphone.innerText = "OK";
+                kqphone.className = "success";
+            } else {
+                kqphone.innerText = "please input again";
+                kqphone.className = "error";
+            }
+        }
+    </script>
+</body>
+</html>
